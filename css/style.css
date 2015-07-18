@@ -1,5 +1,5 @@
-#departure[checked]+.flights .departure{display:table-row}
-#arrival[checked]+.flights .arrival{display:table-row}
+#departure:checked+.flights .departure{display:table-row}
+#arrival:checked+.flights .arrival{display:table-row}
 .flights{position:relative;width:100%;table-layout:fixed}
 .flight{display:none}.flight-type{width:10%;height:20px}
 .flight:hover{background:rgba(0,0,0,0.3)}
@@ -7,4 +7,4 @@
 .flight-info.companyLogo{width:64px}.flight-info.companyLogo:hover:after{width:64px}
 .flight-info.companyLogo img{width:64px}
 .flight-info:hover:after{content:'';display:block;position:absolute;top:0;bottom:0;background:rgba(0,0,0,0.3);z-index:-1;width:10%}
-@media screen and (min-width:1000px){.flight-info_short{display:none} .flight-info_long{display:inline}}@media screen and (max-width:1000px){.flight-info_long{display:none} .flight-info_short{display:inline}}@media screen and (max-width:800px){.flight-info.company{display:none}}
+@media screen and (min-width:1000px){.flight-info_short{display:none} .flight-info_long{display:inline}}@media screen and (max-width:1000px){.flight-info_long{display:none} .flight-info_short{display:inline}}@media screen and (max-width:800px){.flight-info.company{display:none}}@media screen and (max-width:500px){.flight-info.comment{display:none}}

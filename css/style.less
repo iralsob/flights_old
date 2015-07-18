@@ -1,7 +1,7 @@
-#departure[checked]+.flights .departure{
+#departure:checked+.flights .departure{
 	display: table-row;
 }
-#arrival[checked]+.flights .arrival{
+#arrival:checked+.flights .arrival{
 	display: table-row;
 }
 .flights {
@@ -68,6 +68,11 @@
 }
 @media screen and (max-width: 800px){
 	.flight-info.company {
+		display: none;
+	}
+}
+@media screen and (max-width: 500px){
+	.flight-info.comment{
 		display: none;
 	}
 }
