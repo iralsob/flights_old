@@ -1,9 +1,13 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		
+		<meta charset="utf-8">
+        <title>Табло аэропорта</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/normalize.css" rel="stylesheet">
 	</head>
 	<body>
-		<table>
+		<table class="flights">
 			<thead>
 				<tr>
 					<td>Тип рейса</td>
@@ -19,15 +23,15 @@
 			</thead>
 			<tbody>
 				<tr class="flight departure">
-					<td class="flight-type">&#8599;</td>
-					<td class="flight-number">B2 8342</td>
-					<td class="flight-company">Аэрофлот</td>
-					<td class="flight-companyLogo"></td>
-					<td class="flight-aircraft">Tupolev 154M</td>
-					<td class="flight-airport">Варна</td>
-					<td class="flight-time">05:15</td>
-					<td class="flight-status">В пути</td>
-					<td class="flight-comment">Совмещен с B2 732</td>
+					<td class="flight-info type">&#8599;</td>
+					<td class="flight-info number">B2 8342</td>
+					<td class="flight-info company">Аэрофлот</td>
+					<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
+					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
+					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
+					<td class="flight-info time">05:15</td>
+					<td class="flight-info status">В пути</td>
+					<td class="flight-info comment">Совмещен с B2 732</td>
 				</tr>
 				<tr class="flight arrival">
 					<td class="flight-type">&#8600;</td>
