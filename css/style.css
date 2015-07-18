@@ -1,0 +1,5 @@
+.flights{position:relative;min-width:320px}
+.flight-type{width:10%;height:20px}
+.flight:hover{background:rgba(0,0,0,0.3)}
+.flight-info{width:10%}
+.flight-info:hover:after{content:'';display:block;position:absolute;top:0;bottom:0;background:rgba(0,0,0,0.3);z-index:-1;width:10%}
