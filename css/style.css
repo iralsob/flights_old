@@ -1,6 +1,7 @@
 .flights{position:relative;min-width:320px}
 .flight-type{width:10%;height:20px}
 .flight:hover{background:rgba(0,0,0,0.3)}
-.flight-info{width:10%}
+.flight-info{width:10%}.flight-info.type{width:20px}.flight-info.type:after{width:20px}
+.flight-info.companyLogo{width:70px}.flight-info.companyLogo:after{width:70px}
 .flight-info:hover:after{content:'';display:block;position:absolute;top:0;bottom:0;background:rgba(0,0,0,0.3);z-index:-1;width:10%}
 @media screen and (min-width:1000px){.flight-info_short{display:none} .flight-info_long{display:inline}}@media screen and (max-width:1000px){.flight-info_long{display:none} .flight-info_short{display:inline}}
