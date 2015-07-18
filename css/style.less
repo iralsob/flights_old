@@ -1,8 +1,16 @@
+#departure[checked]+.flights .departure{
+	display: table-row;
+}
+#arrival[checked]+.flights .arrival{
+	display: table-row;
+}
 .flights {
 	position: relative;
-	min-width: 320px;
+	width: 100%;
+	table-layout: fixed;
 }
 .flight {
+	display: none;
 	&-type {
 		width:10%;
 		height: 20px;
@@ -13,16 +21,20 @@
 	
 	&-info {
 		width: 10%;
+		padding: 0 7px;
 		&.type {
 			width: 20px;
-			&:after {
+			&:hover:after {
 				width: 20px;
 			}
 		}
 		&.companyLogo {
-			width: 70px;
-			&:after {
-				width: 70px;
+			width: 64px;
+			&:hover:after {
+				width: 64px;
+			}
+			img {
+				width: 64px;
 			}
 		}
 	}
@@ -52,5 +64,10 @@
 	}
 	.flight-info_short {
 		display: inline;
+	}
+}
+@media screen and (max-width: 800px){
+	.flight-info.company {
+		display: none;
 	}
 }
