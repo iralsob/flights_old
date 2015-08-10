@@ -1,85 +1,148 @@
-#departure:checked+label+#arrival+label+.flights .departure{
-	display: table-row;
+.flights
+{
+    position: relative;
+
+    width: 100%;
+
+    table-layout: fixed;
+    &-header
+    {
+        font-weight: 600;
+
+        word-wrap: break-word;
+
+        color: #fff;
+        background: #ff6437;
+        // &_type
+        // {
+        //     width: 50px;
+        // }
+    }
 }
-#arrival:checked+label+.flights .arrival{
-	display: table-row;
+.flight
+{
+    word-wrap: break-word;
+    &:nth-child(even)
+    {
+        background: rgba(81, 241, 227, .5);
+    }
+    &:nth-child(odd)
+    {
+        background: rgba(81, 241, 227, 1);
+    }
+    &:hover
+    {
+        background: rgba(255,215,97,.8);
+    }
+    &-info
+    {
+        &_short
+        {
+            display: none;
+        }
+        // &.type
+        // {
+        //     width: 50px;
+        // }
+    }
+    img
+    {
+        width: 45px;
+    }
 }
-.flights {
-	position: relative;
-	width: 100%;
-	table-layout: fixed;
+
+@media screen and (min-width: 1000px)
+{
+    .flight-info_long
+    {
+        display: inline;
+    }
+    .flight-info_short
+    {
+        display: none;
+    }
 }
-.flight {
-	display: none;
-	&:nth-child(even){
-		background: rgba(10, 100, 10, .1);
-	}
-	&:nth-child(odd){
-		background: rgba(10, 100, 10, .3);
-	}
-	&-type {
-		width:10%;
-		height: 20px;
-	}
-	&:hover {
-		background: rgba(10,100,10,.8);
-		color: #fff;
-	}
-	
-	&-info {
-		width: 10%;
-		padding: 0 7px;
-		&.type {
-			width: 20px;
-			&:hover:after {
-				width: 20px;
-			}
-		}
-		&.companyLogo {
-			width: 64px;
-			&:hover:after {
-				width: 64px;
-			}
-			img {
-				width: 64px;
-			}
-		}
-	}
-	&-info:hover:after {
-		content: '';    
-	    display: block;
-	    position: absolute;
-	    top: 0;
-	    bottom: 0;
-	    background: rgba(10,100,10,.5);
-	    z-index: -1;
-	    width: 10%;
-	}
+@media screen and (max-width: 1000px)
+{
+    .company
+    {
+        .flight-info_long
+        {
+            display: none;
+        }
+        .flight-info_short
+        {
+            display: inline;
+        }
+    }
 
 }
-@media screen and (min-width: 1000px){
-	.flight-info_short {
-		display: none;
-	}
-	.flight-info_long {
-		display: inline;
-	}
+@media screen and (max-width: 900px)
+{
+	.status
+    {
+        overflow: hidden;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 50px;
+    }
 }
-@media screen and (max-width: 1000px){
-	.flight-info_long {
-		display: none;
-	}
-	.flight-info_short {
-		display: inline;
-	}
+@media screen and (max-width: 850px)
+{
+    .airport
+    {
+        .flight-info_long
+        {
+            display: none;
+        }
+        .flight-info_short
+        {
+            display: inline;
+        }
+    }
 }
-@media screen and (max-width: 800px){
-	.flight-info.company {
-		display: none;
-	}
+@media screen and (max-width: 800px)
+{
+    
+    .comment
+    {
+        overflow: hidden;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 50px;
+    }
 }
-@media screen and (max-width: 500px){
-	.flight-info.comment{
-		display: none;
-	}
+@media screen and (max-width: 750px)
+{
+    
+    .aircraft
+    {
+        .flight-info_long
+        {
+            display: none;
+        }
+        .flight-info_short
+        {
+            display: inline;
+        }
+    }
+}
+@media screen and (max-width: 700px)
+{
+    .type
+    {
+        .flight-info_long
+        {
+            display: none;
+        }
+        .flight-info_short
+        {
+            display: inline;
+        }
+    }
+    .flights-header_type {
+    	width: 50px;
+    }
 }

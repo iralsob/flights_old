@@ -5,68 +5,121 @@
         <title>Табло аэропорта</title>
         <link href="css/style.css" rel="stylesheet">
         <link href="css/normalize.css" rel="stylesheet">
+        <script type="text/javascript" src="js/script.js"> </script>
 	</head>
 	<body>
-		<input type="checkbox" name="flights" value="departure" id="departure" checked>
-		<label for="departure">Вылет</label>
-		<input type="checkbox" name="flights" value="arrival" id="arrival" checked>
-		<label for="departure">Прилет</label>
+		<div id="panel">
+			<input type="checkbox" name="flights" value="departure" id="departure">
+			<label for="departure">Вылет</label>
+			<input type="checkbox" name="flights" value="arrival" id="arrival">
+			<label for="departure">Прилет</label>
+		</div>
 		<table class="flights">
-			<thead>
+			<thead class="flights-header">
 				<tr>
-					<td>Тип рейса</td>
-					<td>Номер рейса</td>
-					<td>Авиакомпания</td>
-					<td>Логотип авиакомпании</td>
+					<td class="flights-header_type">Тип рейса</td>
+					<td>№ рейса</td>
+					<td class="flights-header_company">Перевозчик</td>
 					<td>Тип воздушного судна</td>
 					<td>Аэропорт назначения</td>
 					<td>Плановое время вылета/прилёта</td>
 					<td>Статус рейса</td>
-					<td>Примечание</td>
+					<td class="flights-header_comment">Примечание</td>
 				</tr>
 			</thead>	
 			<tbody>
-				<input type="radio" id="flight-1">
-				<label for="flight-1">
-					<tr class="flight departure">
-						<td class="flight-info type">&#8599;</td>
-						<td class="flight-info number">B2 8342</td>
-						<td class="flight-info company">Аэрофлот</td>
-						<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
-						<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
-						<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
-						<td class="flight-info time">05:15</td>
-						<td class="flight-info status">В пути</td>
-						<td class="flight-info comment">Совмещен с B2 732</td>
-					</tr>
-				</label>
-				<tr class="flight arrival">
-					<td class="flight-info type">&#8600;</td>
+				<tr class="flight departure">
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
 					<td class="flight-info number">B2 8342</td>
-					<td class="flight-info company">Аэрофлот</td>
-					<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
 					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
 					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
 					<td class="flight-info time">05:15</td>
-					<td class="flight-info status">В пути</td>
+					<td class="flight-info status">Регистрация</td>
+					<td class="flight-info comment">Совмещен с B2 732</td>
+				</tr>
+				<tr class="flight arrival">
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
+					<td class="flight-info number">B2 8342</td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
+					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
+					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
+					<td class="flight-info time">05:15</td>
+					<td class="flight-info status">Ожидание посадки</td>
 					<td class="flight-info comment">Совмещен с B2 732</td>
 				</tr>
 				<tr class="flight departure">
 					<td class="flight-info type">&#8599;</td>
 					<td class="flight-info number">B2 8342</td>
-					<td class="flight-info company">Аэрофлот</td>
-					<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
 					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
 					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
 					<td class="flight-info time">05:15</td>
-					<td class="flight-info status">В пути</td>
+					<td class="flight-info status">Посадка закончена</td>
 					<td class="flight-info comment">Совмещен с B2 732</td>
 				</tr>
 				<tr class="flight arrival">
-					<td class="flight-info type">&#8600;</td>
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
 					<td class="flight-info number">B2 8342</td>
-					<td class="flight-info company">Аэрофлот</td>
-					<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
+					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
+					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
+					<td class="flight-info time">05:15</td>
+					<td class="flight-info status">Вылетел</td>
+					<td class="flight-info comment">Совмещен с B2 732</td>
+				</tr><tr class="flight departure">
+					<td class="flight-info type">&#8599;</td>
+					<td class="flight-info number">B2 8342</td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
+					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
+					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
+					<td class="flight-info time">05:15</td>
+					<td class="flight-info status">По расписанию</td>
+					<td class="flight-info comment">Совмещен с B2 732</td>
+				</tr>
+				<tr class="flight arrival">
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
+					<td class="flight-info number">B2 8342</td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
+					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
+					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
+					<td class="flight-info time">05:15</td>
+					<td class="flight-info status">Летит</td>
+					<td class="flight-info comment">Совмещен с B2 732</td>
+				</tr>
+				<tr class="flight departure">
+					<td class="flight-info type">&#8599;</td>
+					<td class="flight-info number">B2 8342</td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
+					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
+					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
+					<td class="flight-info time">05:15</td>
+					<td class="flight-info status">Приземлился</td>
+					<td class="flight-info comment">Совмещен с B2 732</td>
+				</tr>
+				<tr class="flight arrival">
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
+					<td class="flight-info number">B2 8342</td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
+					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
+					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
+					<td class="flight-info time">05:15</td>
+					<td class="flight-info status">Задерживается до 07:15</td>
+					<td class="flight-info comment">Совмещен с B2 732</td>
+				</tr><tr class="flight departure">
+					<td class="flight-info type">&#8599;</td>
+					<td class="flight-info number">B2 8342</td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
+					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
+					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
+					<td class="flight-info time">05:15</td>
+					<td class="flight-info status">Отменен</td>
+					<td class="flight-info comment">Совмещен с B2 732</td>
+				</tr>
+				<tr class="flight arrival">
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
+					<td class="flight-info number">B2 8342</td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
 					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
 					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
 					<td class="flight-info time">05:15</td>
@@ -75,8 +128,7 @@
 				</tr><tr class="flight departure">
 					<td class="flight-info type">&#8599;</td>
 					<td class="flight-info number">B2 8342</td>
-					<td class="flight-info company">Аэрофлот</td>
-					<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
 					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
 					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
 					<td class="flight-info time">05:15</td>
@@ -84,20 +136,9 @@
 					<td class="flight-info comment">Совмещен с B2 732</td>
 				</tr>
 				<tr class="flight arrival">
-					<td class="flight-info type">&#8600;</td>
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
 					<td class="flight-info number">B2 8342</td>
-					<td class="flight-info company">Аэрофлот</td>
-					<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
-					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
-					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
-					<td class="flight-info time">05:15</td>
-					<td class="flight-info status">В пути</td>
-					<td class="flight-info comment">Совмещен с B2 732</td>
-				</tr><tr class="flight departure">
-					<td class="flight-info type">&#8599;</td>
-					<td class="flight-info number">B2 8342</td>
-					<td class="flight-info company">Аэрофлот</td>
-					<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
 					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
 					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
 					<td class="flight-info time">05:15</td>
@@ -105,20 +146,9 @@
 					<td class="flight-info comment">Совмещен с B2 732</td>
 				</tr>
 				<tr class="flight arrival">
-					<td class="flight-info type">&#8600;</td>
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
 					<td class="flight-info number">B2 8342</td>
-					<td class="flight-info company">Аэрофлот</td>
-					<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
-					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
-					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
-					<td class="flight-info time">05:15</td>
-					<td class="flight-info status">В пути</td>
-					<td class="flight-info comment">Совмещен с B2 732</td>
-				</tr><tr class="flight departure">
-					<td class="flight-info type">&#8599;</td>
-					<td class="flight-info number">B2 8342</td>
-					<td class="flight-info company">Аэрофлот</td>
-					<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
 					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
 					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
 					<td class="flight-info time">05:15</td>
@@ -126,20 +156,9 @@
 					<td class="flight-info comment">Совмещен с B2 732</td>
 				</tr>
 				<tr class="flight arrival">
-					<td class="flight-info type">&#8600;</td>
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
 					<td class="flight-info number">B2 8342</td>
-					<td class="flight-info company">Аэрофлот</td>
-					<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
-					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
-					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
-					<td class="flight-info time">05:15</td>
-					<td class="flight-info status">В пути</td>
-					<td class="flight-info comment">Совмещен с B2 732</td>
-				</tr><tr class="flight departure">
-					<td class="flight-info type">&#8599;</td>
-					<td class="flight-info number">B2 8342</td>
-					<td class="flight-info company">Аэрофлот</td>
-					<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
 					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
 					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
 					<td class="flight-info time">05:15</td>
@@ -147,10 +166,49 @@
 					<td class="flight-info comment">Совмещен с B2 732</td>
 				</tr>
 				<tr class="flight arrival">
-					<td class="flight-info type">&#8600;</td>
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
 					<td class="flight-info number">B2 8342</td>
-					<td class="flight-info company">Аэрофлот</td>
-					<td class="flight-info companyLogo"><img src="img/aeroflot.png" alt="Logo"></td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
+					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
+					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
+					<td class="flight-info time">05:15</td>
+					<td class="flight-info status">В пути</td>
+					<td class="flight-info comment">Совмещен с B2 732</td>
+				</tr>
+				<tr class="flight arrival">
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
+					<td class="flight-info number">B2 8342</td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
+					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
+					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
+					<td class="flight-info time">05:15</td>
+					<td class="flight-info status">В пути</td>
+					<td class="flight-info comment">Совмещен с B2 732</td>
+				</tr>
+				<tr class="flight arrival">
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
+					<td class="flight-info number">B2 8342</td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
+					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
+					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
+					<td class="flight-info time">05:15</td>
+					<td class="flight-info status">В пути</td>
+					<td class="flight-info comment">Совмещен с B2 732</td>
+				</tr>
+				<tr class="flight arrival">
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
+					<td class="flight-info number">B2 8342</td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
+					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
+					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
+					<td class="flight-info time">05:15</td>
+					<td class="flight-info status">В пути</td>
+					<td class="flight-info comment">Совмещен с B2 732</td>
+				</tr>
+				<tr class="flight arrival">
+					<td class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></td>
+					<td class="flight-info number">B2 8342</td>
+					<td class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></td>
 					<td class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></td>
 					<td class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></td>
 					<td class="flight-info time">05:15</td>
