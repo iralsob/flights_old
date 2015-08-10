@@ -1,3 +1,7 @@
+#departure:checked~.flights .flight.departure{display:table-row}
+.flight.departure{display:none}
+#arrival:checked~.flights .flight.departure{display:table-row}
+.flight.arrival{display:none}
 .flights{position:relative;width:100%;table-layout:fixed}.flights-header{font-weight:600;word-wrap:break-word;color:#fff;background:#ff6437}
 .flight{word-wrap:break-word}.flight:nth-child(even){background:rgba(81,241,227,0.5)}
 .flight:nth-child(odd){background:#51f1e3}
