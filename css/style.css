@@ -1,12 +1,9 @@
-#departure:checked~.flights .flight.departure{display:table-row}
-.flight.departure{display:none}
-#arrival:checked~.flights .flight.departure{display:table-row}
-.flight.arrival{display:none}
 .flights{position:relative;width:100%;table-layout:fixed}.flights-header{font-weight:600;word-wrap:break-word;color:#fff;background:#ff6437}
 .flight{word-wrap:break-word}.flight:nth-child(even){background:rgba(81,241,227,0.5)}
 .flight:nth-child(odd){background:#51f1e3}
 .flight:hover{background:rgba(255,215,97,0.8)}
+.flight.hidden{display:none}
 .flight-info_short{display:none}
 .flight-info.hover{background:rgba(255,215,97,0.8)}
 .flight img{width:45px}
-@media screen and (min-width:1000px){.flight-info_long{display:inline} .flight-info_short{display:none}}@media screen and (max-width:1000px){.company .flight-info_long{display:none} .company .flight-info_short{display:inline}}@media screen and (max-width:900px){.status{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width:50px}}@media screen and (max-width:850px){.airport .flight-info_long{display:none} .airport .flight-info_short{display:inline}}@media screen and (max-width:800px){.comment{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width:50px}}@media screen and (max-width:750px){.aircraft .flight-info_long{display:none} .aircraft .flight-info_short{display:inline}}@media screen and (max-width:700px){.type .flight-info_long{display:none} .type .flight-info_short{display:inline} .flights-header_type{width:50px}}
+@media screen and (min-width:1000px){.flight-info_long{display:inline} .flight-info_short{display:none}}@media screen and (max-width:1000px){.company .flight-info_long{display:none} .company .flight-info_short{display:inline}}@media screen and (max-width:900px){.status{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width:50px} .flights-header{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}}@media screen and (max-width:850px){.airport .flight-info_long{display:none} .airport .flight-info_short{display:inline}}@media screen and (max-width:800px){.comment{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width:50px}}@media screen and (max-width:750px){.aircraft .flight-info_long{display:none} .aircraft .flight-info_short{display:inline}}@media screen and (max-width:700px){.type .flight-info_long{display:none} .type .flight-info_short{display:inline} .flights-header_type{width:50px}}

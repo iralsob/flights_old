@@ -1,6 +1,7 @@
 var flights = document.getElementsByClassName('flight');
 var cells = document.getElementsByClassName('flight-info');
 
+
 //при изменении ширины экрана браузера в табло 
 //автоматически скрываются и/или сокращаются 
 //значения наименее важных столбцов (например, 
@@ -61,4 +62,49 @@ window.onload = function() {
 			header.className = "flights-header";
 		}
 	});
+
+	//два чекбокса над самим табло: прилёт и вылет, 
+	//по нажатию показываются только соответствующие рейсы.
+	var btnDeparture = document.getElementById('departure');
+	var btnArrival = document.getElementById('arrival');
+	var isArrivalFlightsHidden = 0;
+	var isDepartureFlightsHidden = 0;
+
+	btnArrival.onclick = function () {
+		var arrivalFlights =  document.getElementsByClassName(btnArrival.id);
+		for (var i=0; i<arrivalFlights.length; i++) {
+			var arrivalFlight = arrivalFlights[i];
+			if(isArrivalFlightsHidden === 0){
+				isArrivalFlightsHidden = 1;
+				arrivalFlight.className = arrivalFlight.className + ' hidden';
+			} else {
+				isArrivalFlightsHidden = 0;
+				arrivalFlight.className = 'flight arrival';
+			}
+			if(isDepartureFlightsHidden === 0){
+				departureFlight.className = departureFlight.className + ' hidden';
+			} else {
+				departureFlight.className = 'flight arrival';
+			}
+		}
+	};
+
+	btnDeparture.onclick = function () {
+		var departureFlights =  document.getElementsByClassName(btnArrival.id);
+		for (var i=0; i<departureFlights.length; i++) {
+			var departureFlight = departureFlights[i];
+			if(isDepartureFlightsHidden === 0){
+				isDepartureFlightsHidden = 1;
+				departureFlight.className = departureFlight.className + ' hidden';
+			} else {
+				isDepartureFlightsHidden = 0;
+				departureFlight.className = 'flight arrival';
+			}
+			if(isArrivalFlightsHidden === 0){
+				arrivalFlight.className = arrivalFlight.className + ' hidden';
+			} else {
+				arrivalFlight.className = 'flight arrival';
+			}
+		}
+	};
 }
